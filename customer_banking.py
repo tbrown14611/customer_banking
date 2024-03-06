@@ -8,9 +8,30 @@ def main():
     It displays the interest earned on the savings and CD accounts and updates the balances.
     """
     # Prompt the user to set the savings balance, interest rate, and months for the savings account.
-    savings_balance = float(input("What is the balance of your Savings Account? "))
-    savings_interest = float(input("What is the interest rate on your Savings Account (no decimal)? "))
-    savings_maturity = int(input("What is the number of months that you have had your Savings Account? "))
+    savings_processing = True
+    while savings_processing:
+        savings_balance = input("Enter the balance of your Savings Account? ")
+        try:
+            savings_balance = float(savings_balance)
+            savings_processing = False
+        except:
+            print("Savings Balance entered is invalid. Please enter a valid number for Savings Balance")
+    savings_processing = True
+    while savings_processing:
+        savings_interest = input("Enter the interest rate on your Savings Account? ")
+        try:
+            savings_interest = float(savings_interest)
+            savings_processing = False
+        except:
+            print("Savings Interest entered is invalid. Please enter a valid number for Savings Interest")
+    savings_processing = True
+    while savings_processing:
+        savings_maturity = input("Enter the number of months that you have had your Savings Account? ")
+        try:
+            savings_maturity = float(savings_maturity)
+            savings_processing = False
+        except:
+            print("Savings Number of Months entered is invalid. Please enter a valid number for Savings Number of Months")    
 
     # Call the create_savings_account function and pass the variables from the user.
     updated_savings_balance, interest_earned = create_savings_account(savings_balance, savings_interest, savings_maturity)
@@ -23,9 +44,30 @@ def main():
     print(f"Savings Interest earned: {format_interest_earned}") 
 
     # Prompt the user to set the CD balance, interest rate, and months for the CD account.
-    cd_balance = float(input("What is the balance of your Certificate of Deposit Account? "))
-    cd_interest = float(input("What is the interest rate on your Certificate of Deposit Account (no decimal)? "))
-    cd_maturity = int(input("What is the number of months that you have had your Certificate of Deposit Account? "))
+    cd_processing = True
+    while cd_processing:
+        cd_balance = input("Enter the balance of your Certificate of Deposit Account? ")
+        try:
+            cd_balance = float(cd_balance)
+            cd_processing = False
+        except:
+            print("Certificate of Deposit Balance entered is invalid. Please enter a valid number for Certificate of Deposit Balance")
+    cd_processing = True
+    while cd_processing:
+        cd_interest = input("Enter the interest rate on your Certificate of Deposit Account? ")
+        try:
+            cd_interest = float(cd_interest)
+            cd_processing = False
+        except:
+            print("Certificate of Deposit Interest entered is invalid. Please enter a valid number for Certificate of Deposit Interest")
+    cd_processing = True
+    while cd_processing:
+        cd_maturity = input("Enter the number of months that you have had your Certificate of Depostit Account? ")
+        try:
+            cd_maturity = float(cd_maturity)
+            cd_processing = False
+        except:
+            print("Certificate of Deposit Number of Months entered is invalid. Please enter a valid number for Certificate of Deposit Number of Months")    
 
     # Call the create_cd_account function and pass the variables from the user.
     updated_cd_balance, cd_interest_earned = create_cd_account(cd_balance, cd_interest, cd_maturity)
