@@ -13,6 +13,8 @@ def main():
         savings_balance = input("Enter the balance of your Savings Account? ")
         try:
             savings_balance = float(savings_balance)
+            savings_balance = round(savings_balance,2)
+            print(f"Savings Balance Entered: {savings_balance:.2f}")
             savings_processing = False
         except:
             print("Savings Balance entered is invalid. Please enter a valid number for Savings Balance")
@@ -21,6 +23,8 @@ def main():
         savings_interest = input("Enter the interest rate on your Savings Account? ")
         try:
             savings_interest = float(savings_interest)
+            savings_interest = round(savings_interest,3)
+            print(f"Savings Interest Rate Entered: {savings_interest:.3f}")
             savings_processing = False
         except:
             print("Savings Interest entered is invalid. Please enter a valid number for Savings Interest")
@@ -29,6 +33,8 @@ def main():
         savings_maturity = input("Enter the number of months that you have had your Savings Account? ")
         try:
             savings_maturity = float(savings_maturity)
+            savings_maturity = round(savings_maturity,3)
+            print(f"Savings Number of Months Entered: {savings_maturity:.3f}")
             savings_processing = False
         except:
             print("Savings Number of Months entered is invalid. Please enter a valid number for Savings Number of Months")    
@@ -49,6 +55,8 @@ def main():
         cd_balance = input("Enter the balance of your Certificate of Deposit Account? ")
         try:
             cd_balance = float(cd_balance)
+            cd_balance = round(cd_balance,2)
+            print(f"Certificate of Deposit Balance Entered: {cd_balance:.2f}")
             cd_processing = False
         except:
             print("Certificate of Deposit Balance entered is invalid. Please enter a valid number for Certificate of Deposit Balance")
@@ -57,6 +65,8 @@ def main():
         cd_interest = input("Enter the interest rate on your Certificate of Deposit Account? ")
         try:
             cd_interest = float(cd_interest)
+            cd_interest = round(cd_interest,3)
+            print(f"Certificate of Deposit Interest Rate Entered: {cd_interest:.3f}")
             cd_processing = False
         except:
             print("Certificate of Deposit Interest entered is invalid. Please enter a valid number for Certificate of Deposit Interest")
@@ -65,8 +75,10 @@ def main():
         cd_maturity = input("Enter the number of months that you have had your Certificate of Depostit Account? ")
         try:
             cd_maturity = float(cd_maturity)
+            cd_maturity = round(cd_maturity,3)
+            print(f"Certificate of Deposit Months Entered: {cd_maturity:.3f}")
             cd_processing = False
-        except:
+        except:  
             print("Certificate of Deposit Number of Months entered is invalid. Please enter a valid number for Certificate of Deposit Number of Months")    
 
     # Call the create_cd_account function and pass the variables from the user.
