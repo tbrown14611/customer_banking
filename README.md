@@ -1,5 +1,7 @@
 # customer_banking
+It is your responsibility to include a note in the README section of your repo specifying code source and its location within your repo.
 
+Code Source is in Account.py, cd_account.py, customer_banking.py, savings_account.py located within the main branch at https://github.com/tbrown14611/customer_banking
 Module 3 Challenge
 Due Mar 11 by 11:59pm Points 100 Submitting a text entry box or a website url
 Background
